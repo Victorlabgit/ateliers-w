@@ -82,3 +82,4 @@ textarea{min-height:7rem}
   .entreprise__grille,.contact__grille{grid-template-columns:1fr}
   .galerie{grid-template-columns:repeat(2,1fr)}
 }
+.galerie img.nouvelle-ligne{grid-column-start:1}
