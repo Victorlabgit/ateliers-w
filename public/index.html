@@ -4,22 +4,105 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Accueil | Ateliers W</title>
+  <meta name="description" content="Ateliers W : rénovation, home staging, design d'intérieur et communication immobilière. De la conception à la pose, sans intermédiaire.">
   <meta property="og:site_name" content="Ateliers W">
   <meta property="og:title" content="Accueil | Ateliers W">
   <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Ajouts : navigation, introduction centrée, vignettes des services */
+    :root{--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+
+    .entete .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .nav-haut{display:flex;gap:1.75rem;font-size:.95rem}
+    .nav-haut a{text-decoration:none;color:inherit}
+    .nav-haut a:hover{text-decoration:underline;text-underline-offset:6px}
+    .hero__metiers{font-size:1rem;margin:-1rem 0 2rem;opacity:.9}
+
+    .intro{padding:5rem 0 4rem;text-align:center}
+    .intro__citation{font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.3;max-width:46rem;margin:0 auto 1.75rem}
+    .intro__texte{max-width:40rem;margin:0 auto;color:#555}
+
+    .expertises{background:#f7f6f2}
+    .expertises h2{font-family:var(--serif);font-weight:500}
+    .expertises__grille{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+    .tuile{display:block;text-align:center;text-decoration:none;color:inherit}
+    .tuile img{width:100%;aspect-ratio:4/5;object-fit:cover;margin-bottom:1rem}
+    .tuile h3{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin:0 0 .3rem}
+    .tuile p{margin:0;font-size:.95rem;color:#666}
+    .tuile:hover h3{text-decoration:underline;text-underline-offset:6px}
+
+    .entreprise__plus{font-weight:600}
+
+    @media (max-width:52rem){
+      .nav-haut{display:none}
+      .expertises__grille{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
 </head>
 <body>
 
 <header class="entete">
-  <div class="wrap"><a class="logo" href="index.html">Ateliers W</a></div>
+  <div class="wrap">
+    <a class="logo" href="index.html">Ateliers W</a>
+    <nav class="nav-haut" aria-label="Navigation principale">
+      <a href="#entreprise">À propos</a>
+      <a href="#expertises">Services</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
   <div class="hero__contenu">
     <p>De la conception à la pose, sans intermédiaire</p>
     <h1>Ateliers W</h1>
+    <p class="hero__metiers">Rénovation · Home staging · Design d'intérieur · Communication immobilière</p>
     <a class="btn" href="contact.html">Demandez un devis</a>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <p class="intro__citation">« Rénover, mettre en scène, valoriser : un seul atelier, du chantier jusqu'à l'annonce. »</p>
+    <p class="intro__texte">Ateliers W vous accompagne dans vos projets de valorisation immobilière : rénover un bien, le mettre en scène pour la vente, repenser son décor ou aider les acheteurs à s'y projeter grâce à de belles images.</p>
+  </div>
+</section>
+
+<section class="section expertises" id="expertises">
+  <div class="wrap">
+    <h2>Nos services</h2>
+    <div class="expertises__grille">
+
+      <a class="tuile" href="contact.html">
+        <img src="img/realisation-5.jpg" alt="Cuisine rénovée avec îlot" loading="lazy">
+        <h3>Rénovation</h3>
+        <p>Du gros œuvre aux finitions, intérieur et extérieur</p>
+      </a>
+
+      <a class="tuile" href="contact.html">
+        <img src="img/realisation-6.jpg" alt="Salon mis en scène" loading="lazy">
+        <h3>Home staging<br>&amp; mise en scène</h3>
+        <p>Valoriser un bien pour le vendre vite et bien</p>
+      </a>
+
+      <a class="tuile" href="contact.html">
+        <img src="img/realisation-1.jpg" alt="Chambre au décor soigné" loading="lazy">
+        <h3>Design<br>d'intérieur</h3>
+        <p>Couleurs, matières, plan et ambiance</p>
+      </a>
+
+      <a class="tuile" href="contact.html">
+        <img src="img/realisation-4.jpg" alt="Séjour et cuisine ouverte photographiés pour une annonce" loading="lazy">
+        <h3>Communication<br>immobilière</h3>
+        <p>Photos, annonce et visuels avant / après</p>
+      </a>
+
+    </div>
   </div>
 </section>
 
@@ -32,6 +115,7 @@
         <h3>La rencontre des idées et du savoir-faire</h3>
         <p>Entreprise française d'artisans, nous sommes spécialisés dans la construction, la rénovation et la transformation d'espaces intérieurs et extérieurs.<br>
         Découvrez nos services sur mesure, pensés pour s'adapter à vos envies, et donner vie à vos idées, du plan à la réalisation en fonction de vos besoins.</p>
+        <p class="entreprise__plus">Rénovation, home staging, design d'intérieur et communication immobilière : tout est réuni sous un même toit.</p>
         <a class="btn" href="contact.html">Demandez un devis</a>
       </div>
     </div>
