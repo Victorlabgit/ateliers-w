@@ -1,5 +1,7 @@
+
 /* Ateliers W — reproduction du site Wix.
    Ajustez ici les couleurs et polices pour coller au rendu Wix. */
+
 :root{
   --fond:#ffffff;
   --texte:#1a1a1a;
@@ -8,6 +10,7 @@
   --pied-texte:#ffffff;
   --police:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:var(--police);color:var(--texte);background:var(--fond);line-height:1.6}
@@ -203,7 +206,6 @@ textarea{min-height:7rem}
   }
 }
 
-
 /* Pages secondaires */
 .page-simple{padding:8rem 0 4rem}
 .page-simple .entete{position:static}
@@ -212,4 +214,69 @@ textarea{min-height:7rem}
   .entreprise__grille,.contact__grille{grid-template-columns:1fr}
   .galerie{grid-template-columns:repeat(2,1fr)}
 }
+
 .galerie img.nouvelle-ligne{grid-column-start:1}
+
+
+/* ==========================================
+   FOND PAGE CONTACT - IDENTIQUE À L'ACCUEIL
+   ========================================== */
+
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  background: #333 url("https://static.wixstatic.com/media/990b2f_448993ceef384a4c9571619c495d6785~mv2.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 5rem 0;
+}
+
+/* Voile sombre comme sur l'accueil */
+.contact-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Contenu au-dessus de l'image */
+.contact-page .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* Titre blanc */
+.contact-page h2 {
+  color: #fff;
+}
+
+/* Labels blancs */
+.contact-page label {
+  color: #fff;
+}
+
+/* Champs du formulaire */
+.contact-page input,
+.contact-page textarea {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Bouton blanc comme sur l'accueil */
+.contact-page .btn {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+/* Message de retour du formulaire */
+.contact-page .retour {
+  color: #fff;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+  .contact-page {
+    background-attachment: scroll;
+    padding: 4rem 0;
+  }
+}
