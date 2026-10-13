@@ -47,7 +47,7 @@ a{color:inherit}
 .entreprise p{margin:0 0 1.5rem}
 
 /* Réalisations */
-.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.galerie{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;width:100%}
 .galerie img{width:100%;aspect-ratio:382/510;object-fit:cover}
 
 /* Témoignage */
