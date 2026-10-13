@@ -68,11 +68,141 @@ textarea{min-height:7rem}
 .retour{min-height:1.4rem;font-weight:600}
 .hp{position:absolute;left:-9999px}
 
-/* Pied */
-.pied{background:var(--pied);color:var(--pied-texte);padding:2rem 0;font-size:.9rem}
-.pied ul{list-style:none;display:flex;flex-wrap:wrap;gap:1.5rem;padding:0;margin:0 0 1rem}
-.pied a{text-decoration:none}
-.pied a:hover{text-decoration:underline}
+
+/* FOOTER ATELIERS W */
+
+.pied {
+  background: #222521;
+  color: #f4f0e9;
+  padding: 65px 0 25px;
+}
+
+.pied .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pied a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+.pied a:hover {
+  opacity: 0.65;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #454942;
+}
+
+.footer-logo {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.footer-brand p {
+  margin: 12px 0 0;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #bdbeb7;
+}
+
+.footer-location {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #bdbeb7;
+}
+
+.footer-middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 45px 0 55px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.footer-column h3 {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bdbeb7;
+}
+
+.footer-column a,
+.footer-column p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid #454942;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.footer-legal a,
+.footer-bottom p {
+  margin: 0;
+  font-size: 11px;
+  color: #bdbeb7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .pied {
+    padding: 45px 0 25px;
+  }
+
+  .footer-top {
+    padding-bottom: 30px;
+  }
+
+  .footer-logo {
+    font-size: 32px;
+  }
+
+  .footer-middle {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 35px 0 45px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-legal {
+    gap: 12px 18px;
+  }
+}
+
 
 /* Pages secondaires */
 .page-simple{padding:8rem 0 4rem}
