@@ -35,7 +35,7 @@ LEGAL = {
 }
 
 # Mesure d'audience Umami Cloud (EU). Vide = pas de script.
-UMAMI_ID = ""
+UMAMI_ID = "90b2eca8-3694-41f1-ac79-abb402a58dac"
 UMAMI_SRC = "https://cloud.umami.is/script.js"
 
 # Newsletter (formulaire Brevo). Vide = bloc masqué.
