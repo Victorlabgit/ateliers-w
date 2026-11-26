@@ -3,7 +3,7 @@ services:
     name: ateliers-w
     runtime: static
     buildCommand: echo "Site statique, pas de build"
-    staticPublishPath: ./public
+    staticPublishPath: ./docs
     headers:
       - path: /assets/*
         name: Cache-Control

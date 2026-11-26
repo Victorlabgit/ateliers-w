@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Générateur du site Ateliers W (site statique publié par Render depuis public/).
+"""Générateur du site Ateliers W (site statique publié par GitHub Pages depuis docs/, branche main).
 
 Usage : python3 build.py
 
@@ -20,7 +20,7 @@ from content import GUIDES
 from blog import POSTS
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(ROOT, "public")
+OUT = os.path.join(ROOT, "docs")
 SITE = "https://ateliers-w.com"
 BRAND = "Ateliers W"
 EMAIL = "contact@ateliers-w.com"  # redirigée vers la boîte Gmail de la marque (Forward Email, DNS IONOS)
@@ -504,7 +504,7 @@ def build_static_pages():
   <li>Directeur de la publication : le représentant légal de {BRAND}.</li>
 </ul>
 <h2>Hébergement</h2>
-<p>Render Services, Inc., San Francisco, Californie, États-Unis — <a href="https://render.com" rel="noopener">render.com</a>.</p>
+<p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — <a href="https://github.com" rel="noopener">github.com</a>.</p>
 <h2>Propriété intellectuelle</h2>
 <p>Les textes, photographies et visuels de ce site sont la propriété de {BRAND}, sauf mention contraire. Toute reproduction sans autorisation est interdite.</p>
 <h2>Liens</h2>
