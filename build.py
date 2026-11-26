@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "public")
 SITE = "https://ateliers-w.com"
 BRAND = "Ateliers W"
-EMAIL = "contactateliersw@gmail.com"  # passera à contact@ateliers-w.com quand la redirection IONOS sera active
+EMAIL = "contact@ateliers-w.com"  # redirigée vers la boîte Gmail de la marque (Forward Email, DNS IONOS)
 
 # Mentions légales : rempli dès que les informations sont fournies (aucun nom de personne).
 LEGAL = {
