@@ -44,8 +44,8 @@ NEWSLETTER_ACTION = ""
 # Réseaux sociaux de la marque (vide = icône masquée).
 SOCIAL = {
     "instagram": "https://www.instagram.com/les_ateliersw/",
-    "facebook": "",
-    "linkedin": "",
+    "facebook": "https://www.facebook.com/profile.php?id=61596660734709",
+    "linkedin": "https://www.linkedin.com/company/ateliers-w/",
 }
 
 # Liens sortants. "aff": True => lien affilié (rel sponsored + mention).
