@@ -461,8 +461,15 @@ def build_contact():
 
 
 
+PHOTOS_BANDEAU = ["/img/realisation-4.jpg", "/img/realisation-5.jpg", "/img/realisation-1.jpg",
+                  "/img/realisation-6.jpg", "/img/service-renovation.jpg", "/img/service-design-interieur.jpg"]
+
+
 def bandeau(h1, crumbs, image="/img/realisation-4.jpg", kicker="", meta=""):
-    """Bandeau photo en tête des pages de contenu (même esprit que l'accueil)."""
+    """Bandeau photo en tête des pages de contenu (même esprit que l'accueil).
+    Les images /img/og/ contiennent déjà du texte : on les remplace par une vraie photo."""
+    if not image or image.startswith("/img/og/"):
+        image = PHOTOS_BANDEAU[sum(map(ord, h1)) % len(PHOTOS_BANDEAU)]
     fil = " › ".join(f'<a href="{u}">{esc(t)}</a>' if u else esc(t) for t, u in crumbs)
     k = f'<p class="bandeau-page__kicker">{esc(kicker)}</p>' if kicker else ""
     m = f'<p class="bandeau-page__meta">{meta}</p>' if meta else ""
