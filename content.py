@@ -12,6 +12,103 @@ Insérer les nouveaux guides EN HAUT de la liste.
 
 GUIDES = [
     {
+        "slug": "revetement-de-sol-parquet-stratifie-vinyle-carrelage",
+        "title": "Revêtement de sol : parquet, stratifié, vinyle, carrelage",
+        "h1": "Revêtement de sol : parquet, stratifié, vinyle ou carrelage ?",
+        "description": "Parquet massif ou contrecollé, stratifié, vinyle, carrelage : quel revêtement de sol choisir pour un appartement à Paris ? Le comparatif, pièce par pièce.",
+        "date": "2026-11-27",
+        "read": 9,
+        "image": "/img/og/revetement-de-sol-parquet-stratifie-vinyle-carrelage.jpg",
+        "intro": """<p>Le revêtement de sol, c'est ce que l'on voit en premier en entrant dans une pièce, et ce que l'on use tous les jours. En appartement parisien, le choix se joue sur quatre critères : la pièce (sèche ou humide), le bruit transmis aux voisins du dessous, l'entretien que vous êtes prêt à faire et la durée pendant laquelle vous comptez garder le logement.</p>
+<p>Voici les cinq familles que nous posons le plus souvent en rénovation, avec leurs vrais points forts et leurs limites. Nous ne donnons pas de prix au mètre carré : ils dépendent du produit, de l'état du support, de la sous-couche, des seuils et plinthes, et de la pose. Avant de remplacer un sol en copropriété, lisez aussi <a href="/journal/travaux-copropriete-faut-il-une-autorisation.html">travaux en copropriété : faut-il une autorisation ?</a></p>""",
+        "verdict": """<ul>
+<li><strong>Séjour et chambres, logement gardé longtemps :</strong> le parquet massif, qui se ponce et se rénove.</li>
+<li><strong>Rendu bois authentique, pose plus simple :</strong> le parquet contrecollé.</li>
+<li><strong>Budget serré, location ou préparation d'une vente :</strong> le stratifié, avec une {{lien:Amazon sous-couche acoustique|sous-couche acoustique}} adaptée.</li>
+<li><strong>Cuisine, entrée, salle de bains sans carrelage :</strong> le vinyle (lames ou rouleau).</li>
+<li><strong>Salle de bains, douche à l'italienne, pièces très sollicitées :</strong> le carrelage en grès cérame.</li>
+</ul>""",
+        "options": [
+            {
+                "id": "parquet-massif",
+                "name": "Parquet massif",
+                "best_for": "Séjours et chambres, appartements anciens, logement gardé longtemps",
+                "watch": "Eau stagnante, variations d'humidité, rayures des pieds de meubles",
+                "body": """<p>Chaque lame est taillée dans une seule épaisseur de bois (chêne le plus souvent). C'est le sol des appartements haussmanniens : point de Hongrie, bâtons rompus, lames droites. Son grand atout est sa longévité : un parquet massif usé se ponce et se vitrifie ou se huile à nouveau, plusieurs fois au cours de sa vie.</p>
+<p>Il reste un matériau vivant, sensible à l'eau et aux écarts d'humidité : on l'évite dans la salle de bains et on le nettoie avec une serpillière bien essorée. Des {{lien:Amazon patins feutre|patins en feutre}} sous les chaises limitent les rayures. Si vous avez déjà un parquet ancien sous une moquette, sa rénovation est souvent plus intéressante qu'un remplacement.</p>""",
+                "pros": ["Très durable, se ponce et se rénove plusieurs fois", "Matériau noble, valorise un bien ancien", "Grand choix de poses (bâtons rompus, point de Hongrie…)"],
+                "cons": ["Sensible à l'eau et à l'humidité", "Pose plus longue, souvent collée ou clouée", "Bruits de pas si la pose n'intègre pas d'isolation"],
+            },
+            {
+                "id": "parquet-contrecolle",
+                "name": "Parquet contrecollé",
+                "best_for": "Rendu bois véritable avec une pose plus rapide, y compris flottante",
+                "watch": "Épaisseur de la couche d'usure : elle conditionne les ponçages possibles",
+                "body": """<p>Le contrecollé associe une couche supérieure en bois noble (la couche d'usure) à un support en bois ou en panneau. En surface, c'est du vrai bois ; dessous, la structure en couches le rend plus stable que le massif face aux variations d'humidité.</p>
+<p>Il se pose collé ou flottant (clipsé sur une sous-couche), ce qui le rend adapté à la rénovation. Le point à vérifier est l'épaisseur de la couche d'usure indiquée par le fabricant : plus elle est épaisse, plus le parquet pourra être poncé un jour. Certaines couches très fines ne se poncent pas.</p>""",
+                "pros": ["Vrai bois en surface", "Plus stable que le massif", "Pose flottante possible, rapide en rénovation"],
+                "cons": ["Nombre de ponçages limité par la couche d'usure", "Craint l'eau stagnante comme tout parquet", "Sonorité « creuse » en pose flottante sans bonne sous-couche"],
+            },
+            {
+                "id": "stratifie",
+                "name": "Stratifié",
+                "best_for": "Petits budgets, location, home staging avant vente",
+                "watch": "Eau sur les joints, sonorité, impossible à poncer",
+                "body": """<p>Le stratifié n'est pas du bois : c'est un panneau de fibres recouvert d'une image décorative et d'une couche de protection. Les décors récents imitent bien le bois ou la pierre, et la surface résiste bien aux rayures du quotidien. Il se pose en flottant, rapidement, souvent directement sur l'ancien sol s'il est plan.</p>
+<p>Son âme en fibres craint l'eau : les fabricants recommandent un nettoyage à la serpillière à peine humide, sans excès d'eau (voir les conseils de {{lien:Quick-Step humidité|Quick-Step}}). Certaines gammes sont annoncées résistantes à l'eau : fiez-vous à la fiche technique du fabricant pour savoir dans quelles pièces elles sont admises. Une rayure profonde ne se répare pas : on remplace la lame.</p>""",
+                "pros": ["Économique et rapide à poser", "Bonne résistance aux rayures de surface", "Grand choix de décors"],
+                "cons": ["Ne se ponce pas : une lame abîmée se remplace", "Sensible à l'eau selon la gamme", "Bruit de pas sans sous-couche acoustique adaptée"],
+            },
+            {
+                "id": "vinyle",
+                "name": "Vinyle (lames ou rouleau)",
+                "best_for": "Cuisine, entrée, salle de bains sans carrelage, petits budgets",
+                "watch": "Support parfaitement plan, objets lourds et pieds pointus",
+                "body": """<p>Le sol vinyle (PVC) existe en rouleau, en dalles ou en lames clipsables ou à coller (souvent appelées LVT). Il est souple, doux et silencieux sous le pied, et sa surface ne craint pas l'eau : les fabricants comme {{lien:Tarkett pièces humides|Tarkett}} le présentent comme une solution pour la cuisine et la salle de bains, à condition d'une pose soignée aux jonctions et en périphérie.</p>
+<p>Il demande un support très plan : les défauts du sol en dessous finissent par se voir. Les pieds de meubles lourds ou pointus peuvent le marquer. Les décors bois et pierre sont réalistes, mais le toucher reste différent d'un matériau naturel.</p>""",
+                "pros": ["Surface insensible à l'eau", "Confortable et silencieux", "Pose rapide, faible épaisseur (pratique pour les seuils)"],
+                "cons": ["Exige un support très plan", "Peut se marquer sous les charges lourdes", "Aspect moins noble qu'un bois ou une pierre"],
+            },
+            {
+                "id": "carrelage",
+                "name": "Carrelage (grès cérame)",
+                "best_for": "Salle de bains, douche à l'italienne, cuisine, entrée",
+                "watch": "Poids, bruits d'impact, pose et joints exigeants",
+                "body": """<p>Le grès cérame est le carrelage le plus courant aujourd'hui : dense, peu poreux, très résistant à l'eau, aux taches et à l'usure. C'est le revêtement de référence pour la salle de bains et la seule option sérieuse sous une douche de plain-pied. Les grands formats et les imitations bois, béton ou pierre permettent d'unifier plusieurs pièces.</p>
+<p>Il est froid au toucher (sauf plancher chauffant), lourd, et sa pose demande un support sain, des joints soignés et, dans les pièces d'eau, une étanchéité sous carrelage. En copropriété, remplacer une moquette par du carrelage collé peut augmenter fortement les bruits de chocs chez le voisin du dessous : prévoyez une sous-couche acoustique adaptée.</p>""",
+                "pros": ["Insensible à l'eau, très durable", "Entretien simple", "Seul choix fiable sous une douche à l'italienne"],
+                "cons": ["Froid et dur sous le pied", "Lourd, pose longue et technique", "Transmet les bruits de chocs sans isolation"],
+            },
+        ],
+        "how_to_choose": """<ol>
+<li><strong>Partez de la pièce.</strong> Pièces sèches (séjour, chambres) : parquet, contrecollé ou stratifié. Pièces humides : carrelage ou vinyle. Une même teinte déclinée dans plusieurs matériaux garde l'unité de l'appartement.</li>
+<li><strong>Pensez aux voisins du dessous.</strong> Les bruits de pas se transmettent par le plancher ; l'{{lien:ADEME bruit|ADEME}} rappelle l'intérêt d'une sous-couche ou d'une chape désolidarisée pour les limiter. Vérifiez aussi ce qu'impose votre règlement de copropriété avant de changer un sol.</li>
+<li><strong>Regardez l'horizon de temps.</strong> Vous restez longtemps : un sol qui se rénove (massif, contrecollé épais, carrelage). Vous vendez bientôt : un sol neutre et propre suffit, c'est souvent la base d'un <a href="/home-staging-paris.html">home staging</a> efficace.</li>
+<li><strong>Faites vérifier le support.</strong> Planéité, humidité, ancien revêtement à déposer ou non : c'est souvent ce qui fait varier le chantier et le devis.</li>
+<li><strong>Anticipez les seuils.</strong> Les épaisseurs différentes entre pièces créent des ressauts ; les portes peuvent devoir être recoupées.</li>
+</ol>
+<p>Vous refaites aussi la cuisine ? Notre guide <a href="/guides/plan-de-travail-cuisine-quel-materiau-choisir.html">plan de travail : quel matériau choisir ?</a> vous aidera à assortir sol et plan.</p>""",
+        "faq": [
+            ("Quel revêtement de sol choisir pour une salle de bains ?",
+             "<p>Le carrelage en grès cérame est la référence, et le seul choix fiable sous une douche à l'italienne. Le vinyle est une alternative confortable hors zone de douche. Le parquet et le stratifié classiques sont à éviter dans les pièces d'eau, sauf gammes explicitement prévues par le fabricant.</p>"),
+            ("Parquet massif ou contrecollé : quelle différence ?",
+             "<p>Le massif est en bois sur toute son épaisseur et peut être poncé plusieurs fois. Le contrecollé n'a qu'une couche de bois noble en surface, sur un support plus stable : il se pose plus facilement, mais le nombre de ponçages dépend de l'épaisseur de cette couche.</p>"),
+            ("Peut-on poser un nouveau sol sur l'ancien ?",
+             "<p>Souvent oui pour un stratifié, un contrecollé flottant ou certains vinyles, si l'ancien sol est plan, sain et bien adhérent. La surépaisseur peut toutefois imposer de recouper les portes et créer des seuils. Un diagnostic du support avant devis évite les mauvaises surprises.</p>"),
+            ("Faut-il une autorisation pour changer le sol en copropriété ?",
+             "<p>Changer un revêtement à l'intérieur de son lot ne demande en général pas d'accord de l'assemblée générale, mais le règlement de copropriété peut imposer des exigences acoustiques. Vous restez responsable si le nouveau sol aggrave les nuisances chez le voisin. Voir <a href=\"/journal/travaux-copropriete-faut-il-une-autorisation.html\">notre article sur les travaux en copropriété</a>.</p>"),
+            ("Combien coûte la pose d'un revêtement de sol ?",
+             "<p>Cela dépend du matériau, de la surface, de l'état du support, de la sous-couche, des plinthes et des seuils. Nous ne donnons pas de fourchette générique : envoyez-nous des photos et les surfaces pour un devis précis.</p>"),
+        ],
+        "sources": [
+            ("ADEME — Isolation phonique : réduire les nuisances sonores", "https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/proteger-bruit/isolation-phonique-reduire-nuisances-sonores"),
+            ("ADEME — Guide pratique « Isoler son logement du bruit »", "https://librairie.ademe.fr/ged/1955/guide-pratique-isoler-son-logement-du-bruit.pdf"),
+            ("Quick-Step — How do I avoid humidity problems? (stratifié)", "https://www.quick-step.co.uk/en-gb/frequently-asked-questions/laminate/general/how-do-i-avoid-humidity-problems"),
+            ("Tarkett — Vinyl floors in the kitchen and bathroom", "https://home.tarkett.co.uk/en_GB/node/vinyl-floors-in-the-kitchen-and-bathroom-14508"),
+        ],
+        "cta": "Vous changez les sols d'un appartement à Paris, avant d'emménager ou de vendre ? Nous conseillons, préparons le support et posons, sans intermédiaire.",
+    },
+    {
         "slug": "plan-de-travail-cuisine-quel-materiau-choisir",
         "title": "Plan de travail de cuisine : quel matériau choisir ?",
         "h1": "Plan de travail de cuisine : quel matériau choisir ?",

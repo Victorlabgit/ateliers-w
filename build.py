@@ -72,6 +72,11 @@ LINKS = {
     "ANIL diagnostics": {"url": "https://www.anil.org/votre-besoin/acheter/diagnostics/quels-diagnostics/", "aff": False},
     "Annuaire diagnostiqueurs": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R57710", "aff": False},
     "Observatoire DPE ADEME": {"url": "https://observatoire-dpe-audit.ademe.fr/", "aff": False},
+    "Amazon sous-couche acoustique": {"amazon": "sous-couche acoustique parquet stratifié"},
+    "Amazon patins feutre": {"amazon": "patins feutre meubles"},
+    "Quick-Step humidité": {"url": "https://www.quick-step.co.uk/en-gb/frequently-asked-questions/laminate/general/how-do-i-avoid-humidity-problems", "aff": False},
+    "Tarkett pièces humides": {"url": "https://home.tarkett.co.uk/en_GB/node/vinyl-floors-in-the-kitchen-and-bathroom-14508", "aff": False},
+    "ADEME bruit": {"url": "https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/proteger-bruit/isolation-phonique-reduire-nuisances-sonores", "aff": False},
 }
 
 TODAY = date.today().isoformat()
