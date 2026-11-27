@@ -25,7 +25,7 @@ a{color:inherit}
 
 /* Hero */
 .hero{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;color:#fff;
-  background:#333 url("https://static.wixstatic.com/media/990b2f_448993ceef384a4c9571619c495d6785~mv2.jpg") center/cover no-repeat}
+  background:#333 url("https://static.wixstatic.com/media/990b2f_448993ceef384a4c9571619c495d6785~mv2.jpg/v1/fit/w_1920,h_1920,q_75/hero.jpg") center/cover no-repeat}
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
 .hero__contenu{position:relative;padding:6rem 1.5rem 3rem}
 .hero p{font-size:1.2rem;margin:0 0 .5rem}
@@ -225,7 +225,7 @@ textarea{min-height:7rem}
 .contact-page {
   position: relative;
   min-height: 100vh;
-  background: #333 url("https://static.wixstatic.com/media/990b2f_448993ceef384a4c9571619c495d6785~mv2.jpg") center/cover no-repeat;
+  background: #333 url("https://static.wixstatic.com/media/990b2f_448993ceef384a4c9571619c495d6785~mv2.jpg/v1/fit/w_1920,h_1920,q_75/hero.jpg") center/cover no-repeat;
   background-attachment: fixed;
   padding: 5rem 0;
 }

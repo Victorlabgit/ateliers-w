@@ -6,6 +6,7 @@ Usage : python3 build.py
 - Pages fixes (accueil, contact, méthode, légal) : définies dans ce fichier.
 - Guides comparatifs : content.py (liste GUIDES).
 - Journal (blog) : blog.py (liste POSTS).
+- Pages services (une par métier, « <service> Paris ») : services.py (liste SERVICES).
 - Liens sortants / affiliés : dictionnaire LINKS ci-dessous. Dans les textes,
   écrire {{lien:Clé}} ou {{lien:Clé|texte du lien}} ; le bon rel et le suivi
   Umami sont ajoutés automatiquement.
@@ -22,6 +23,7 @@ from urllib.parse import quote_plus
 
 from content import GUIDES
 from blog import POSTS
+from services import SERVICES
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "docs")
@@ -166,6 +168,10 @@ def org_jsonld():
                 "address": {"@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR"},
                 "sameAs": [u for u in SOCIAL.values() if u],
                 "knowsAbout": ["Rénovation", "Home staging", "Design d'intérieur", "Communication immobilière"],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog", "name": "Services",
+                    "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": s["h1"], "url": f"{SITE}/{s['slug']}.html"}} for s in SERVICES],
+                },
             },
             {
                 "@type": "WebSite",
@@ -208,7 +214,7 @@ NAV = [("/#expertises", "Services"), ("/#realisations", "Réalisations"), ("/gui
        ("/journal/", "Journal"), ("/notre-methode.html", "Notre méthode")]
 
 
-def head(title, description, path, jsonld=(), og_type="website", image="/img/service-renovation.jpg", extra=""):
+def head(title, description, path, jsonld=(), og_type="website", image="/img/service-renovation.jpg", extra="", robots="index, follow, max-image-preview:large"):
     v = css_version()
     lds = "".join(f'\n<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>' for d in jsonld)
     umami = (f'\n<script defer src="{UMAMI_SRC}" data-website-id="{UMAMI_ID}"></script>' if UMAMI_ID else "")
@@ -219,7 +225,7 @@ def head(title, description, path, jsonld=(), og_type="website", image="/img/ser
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="{robots}">
 <link rel="canonical" href="{SITE}{path}">
 <link rel="icon" type="image/x-icon" href="/img/logo.ico">
 <link rel="apple-touch-icon" href="/img/logo.png">
@@ -298,6 +304,10 @@ def footer():
         {expl}
       </div>
       <div class="footer-column">
+        <h3>Services</h3>
+        {"".join(f'<a href="/{s["slug"]}.html">{esc(s["h1"])}</a>' for s in SERVICES)}
+      </div>
+      <div class="footer-column">
         <h3>Contact</h3>
         <a href="/contact.html" data-umami-event="devis-click" data-umami-event-place="footer">Demandez un devis</a>
         <a href="mailto:{EMAIL}">{EMAIL}</a>
@@ -356,6 +366,11 @@ def aff_notice(texts):
 
 
 # ---------------------------------------------------------------- accueil
+def wix(u, w=1000):
+    """Image Wix servie redimensionnée par le CDN Wix (les originaux pèsent jusqu'à 2,8 Mo)."""
+    return f"{u}/v1/fit/w_{w},h_{w},q_80/img.jpg" if "wixstatic.com" in u else u
+
+
 GALERIE = [
     "https://static.wixstatic.com/media/990b2f_b3f0397ceaa146f08fc655c63d8d6603~mv2.jpg",
     "/img/realisation-5.jpg",
@@ -383,7 +398,7 @@ def build_home():
         f'<h3>{esc(g["h1"])}</h3><p>{esc(g["description"])}</p></a>'
         for g in GUIDES[:3])
     gal = "".join(
-        f'<img{" class=\"nouvelle-ligne\"" if i % 3 == 0 and i else ""} src="{u}" alt="Réalisation {BRAND} : rénovation et aménagement intérieur" loading="lazy">'
+        f'<img{" class=\"nouvelle-ligne\"" if i % 3 == 0 and i else ""} src="{wix(u)}" alt="Réalisation {BRAND} à Paris : rénovation et aménagement intérieur ({i + 1})" loading="lazy" decoding="async">'
         for i, u in enumerate(GALERIE))
     body = f"""
 <section class="hero">
@@ -406,16 +421,16 @@ def build_home():
   <div class="wrap">
     <h2>Nos services</h2>
     <div class="expertises__grille">
-      <a class="tuile" href="/contact.html" data-umami-event="devis-click" data-umami-event-place="service-renovation">
+      <a class="tuile" href="/renovation-appartement-paris.html" data-umami-event="service-click" data-umami-event-place="service-renovation">
         <img src="/img/service-renovation.jpg" alt="Cuisine rénovée avec îlot" loading="lazy">
         <h3>Rénovation</h3><p>Du gros œuvre aux finitions, intérieur et extérieur</p></a>
-      <a class="tuile" href="/contact.html" data-umami-event="devis-click" data-umami-event-place="service-home-staging">
+      <a class="tuile" href="/home-staging-paris.html" data-umami-event="service-click" data-umami-event-place="service-home-staging">
         <img src="/img/service-home-staging.jpg" alt="Salon mis en scène pour une vente" loading="lazy">
         <h3>Home staging<br>&amp; mise en scène</h3><p>Valoriser un bien pour le vendre vite et bien</p></a>
-      <a class="tuile" href="/contact.html" data-umami-event="devis-click" data-umami-event-place="service-design">
+      <a class="tuile" href="/design-interieur-paris.html" data-umami-event="service-click" data-umami-event-place="service-design">
         <img src="/img/service-design-interieur.jpg" alt="Chambre au décor soigné" loading="lazy">
         <h3>Design<br>d'intérieur</h3><p>Couleurs, matières, plan et ambiance</p></a>
-      <a class="tuile" href="/contact.html" data-umami-event="devis-click" data-umami-event-place="service-communication">
+      <a class="tuile" href="/photos-immobilieres-paris.html" data-umami-event="service-click" data-umami-event-place="service-communication">
         <img src="/img/service-communication-immobiliere.jpg" alt="Séjour et cuisine ouverte photographiés pour une annonce" loading="lazy">
         <h3>Communication<br>immobilière</h3><p>Photos, annonce et visuels avant / après</p></a>
     </div>
@@ -426,7 +441,7 @@ def build_home():
   <div class="wrap">
     <h2>Notre entreprise</h2>
     <div class="entreprise__grille">
-      <img src="https://static.wixstatic.com/media/990b2f_128f53b0d23041e7aa7f744d688919c4~mv2.jpg" alt="{BRAND}, la rencontre des idées et du savoir-faire" loading="lazy">
+      <img src="{wix("https://static.wixstatic.com/media/990b2f_128f53b0d23041e7aa7f744d688919c4~mv2.jpg", 1200)}" alt="{BRAND}, la rencontre des idées et du savoir-faire" loading="lazy">
       <div>
         <h3>La rencontre des idées et du savoir-faire</h3>
         <p>Entreprise française d'artisans, nous sommes spécialisés dans la construction, la rénovation et la transformation d'espaces intérieurs et extérieurs.<br>
@@ -456,7 +471,7 @@ def build_home():
 {newsletter_block("accueil")}
 """
     ld = [org_jsonld()]
-    page("/", f"{BRAND} | Rénovation, Home Staging & Design d'intérieur à Paris",
+    page("/", f"Rénovation & home staging à Paris | {BRAND}",
          f"{BRAND}, entreprise de rénovation, home staging, design d'intérieur et communication immobilière à Paris. De la conception à la pose, sans intermédiaire.",
          body, ld, hero=True, priority="1.0")
 
@@ -614,6 +629,38 @@ def build_static_pages():
 """, "Conditions d'utilisation")
 
 
+# ---------------------------------------------------------------- services
+def build_services():
+    for sv in SERVICES:
+        f = lambda t: expand(t.replace("{BRAND}", BRAND))
+        path = f"/{sv['slug']}.html"
+        secs = "".join(f"<h2>{esc(h)}</h2>{f(c)}" for h, c in sv["sections"])
+        faq = [(q, a.replace("{BRAND}", BRAND)) for q, a in sv["faq"]]
+        autres = "".join(f'<li><a href="/{o["slug"]}.html">{esc(o["h1"])}</a></li>' for o in SERVICES if o is not sv)
+        body = f"""
+{bandeau(esc(sv['h1']), [("Accueil", "/"), ("Services", "/#expertises")], sv["image"], BRAND)}
+<main class="section page-texte">
+  <article class="wrap texte">
+    {f(sv['intro'])}
+    {cta_devis("service-" + sv['slug'] + "-haut", "Décrivez votre projet (adresse ou arrondissement, surface, délais) : nous vous répondons avec un devis.")}
+    {secs}
+    {faq_html(faq)}
+    <section class="lies"><h2>Nos autres services</h2><ul>{autres}</ul></section>
+    {cta_devis("service-" + sv['slug'])}
+  </article>
+</main>"""
+        service_ld = {
+            "@context": "https://schema.org", "@type": "Service",
+            "name": sv["h1"], "serviceType": sv["name"], "description": sv["description"],
+            "url": SITE + path, "image": SITE + sv["image"],
+            "provider": {"@id": SITE + "/#org", "@type": "HomeAndConstructionBusiness", "name": BRAND, "url": SITE + "/"},
+            "areaServed": {"@type": "City", "name": "Paris"},
+        }
+        page(path, sv["title"], sv["description"], body,
+             [service_ld, faq_jsonld(faq), breadcrumb([("Accueil", "/"), (sv["name"], path)])],
+             image=sv["image"], priority="0.9", hero=True)
+
+
 # ---------------------------------------------------------------- guides
 def sources_html(src):
     if not src:
@@ -762,11 +809,11 @@ def build_404():
 <h1 class="titre-page">Page introuvable</h1>
 <p>Cette page n'existe pas ou a été déplacée. <a href="/">Retour à l'accueil</a> ou <a href="/journal/">voir le Journal</a>.</p>
 </div></main>"""
-    write("/404.html", head(f"Page introuvable | {BRAND}", "Page introuvable.", "/404.html") + header() + body + footer())
+    write("/404.html", head(f"Page introuvable | {BRAND}", "Page introuvable.", "/404.html", robots="noindex, follow") + header() + body + footer())
 
 
 def main():
-    slugs = [g["slug"] for g in GUIDES] + [p["slug"] for p in POSTS]
+    slugs = [g["slug"] for g in GUIDES] + [p["slug"] for p in POSTS] + [s["slug"] for s in SERVICES]
     assert len(slugs) == len(set(slugs)), "slug en double"
     for p in POSTS:
         assert not p.get("guide") or p["guide"] in {g["slug"] for g in GUIDES}, f"guide inconnu : {p['guide']}"
@@ -777,6 +824,7 @@ def main():
             os.remove(fp)
     build_home()
     build_contact()
+    build_services()
     build_static_pages()
     build_guides()
     build_blog()

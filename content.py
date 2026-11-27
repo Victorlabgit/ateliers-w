@@ -93,7 +93,7 @@ GUIDES = [
         "how_to_choose": """<ol>
 <li><strong>Partez de votre usage.</strong> Vous posez vos casseroles en sortant du feu ? Évitez le stratifié et le quartz sans dessous-de-plat. Vous cuisinez peu ? Le stratifié ou le quartz suffisent largement.</li>
 <li><strong>Pensez à l'entretien que vous êtes prêt à faire.</strong> Le bois et certaines pierres demandent un entretien régulier ; le quartz, la céramique et l'inox presque pas.</li>
-<li><strong>Si vous vendez bientôt</strong>, un plan sobre et clair, bien posé, suffit à valoriser la cuisine : c'est souvent le meilleur rapport effet / coût en home staging.</li>
+<li><strong>Si vous vendez bientôt</strong>, un plan sobre et clair, bien posé, suffit à valoriser la cuisine : c'est souvent le meilleur rapport effet / coût en <a href="/home-staging-paris.html">home staging</a>.</li>
 <li><strong>Demandez des échantillons</strong> et regardez-les à la lumière de votre cuisine, à côté des façades et de la crédence.</li>
 <li><strong>Faites chiffrer sur plan</strong> : découpes, chants, épaisseur, crédence assortie et pose changent beaucoup le total.</li>
 </ol>
