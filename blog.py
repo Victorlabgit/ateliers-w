@@ -14,6 +14,70 @@ Insérer les nouveaux articles EN HAUT de la liste.
 
 POSTS = [
     {
+        "slug": "diagnostics-obligatoires-vente-appartement",
+        "title": "Diagnostics obligatoires pour vendre un appartement",
+        "h1": "Diagnostics obligatoires pour vendre un appartement : la liste",
+        "description": "DPE, amiante, plomb, électricité, gaz, état des risques, loi Carrez : les diagnostics obligatoires pour vendre un appartement, leur validité, quand les fournir.",
+        "date": "2026-11-27",
+        "category": "Vendre / louer",
+        "read": 6,
+        "guide": None,
+        "image": "/img/og/diagnostics-obligatoires-vente-appartement.jpg",
+        "answer": """<p>Pour vendre un appartement, les diagnostics obligatoires sont réunis dans le <strong>dossier de diagnostic technique (DDT)</strong>, à remettre à l'acheteur dès la promesse de vente. Le DPE est toujours exigé ; les autres (amiante, plomb, électricité, gaz, termites, état des risques…) dépendent de l'âge de l'immeuble, de ses installations et de sa localisation. La surface Carrez doit aussi figurer dans la promesse et dans l'acte.</p>""",
+        "body": """<p>Avant de mettre un appartement en vente, la question des diagnostics obligatoires arrive très vite, souvent en même temps que celle des petits travaux et de la préparation du bien. Voici la liste telle que la présentent {{lien:Service-Public diagnostics vente|Service-Public}} et l'{{lien:ANIL diagnostics|ANIL}}, avec les durées de validité à surveiller. Les règles évoluent : vérifiez toujours votre cas avec votre notaire et votre diagnostiqueur.</p>
+
+<h2>Le DDT : un dossier à remettre dès la promesse</h2>
+<p>Les diagnostics sont regroupés dans le dossier de diagnostic technique. Le vendeur le joint à la promesse (ou au compromis) de vente, ou, à défaut de promesse, à l'acte de vente. Concrètement, il vaut mieux le commander dès la mise en vente : le DPE doit de toute façon être disponible dès ce moment, puisque ses résultats doivent apparaître dans l'annonce.</p>
+<p>Les diagnostics sont réalisés par un professionnel certifié et assuré, sans lien avec le vendeur ; un {{lien:Annuaire diagnostiqueurs|annuaire officiel}} permet de vérifier la certification. Seul l'état des risques peut être établi par le vendeur lui-même, éventuellement aidé d'un professionnel.</p>
+
+<h2>Les diagnostics selon votre appartement</h2>
+<ul>
+<li><strong>DPE (diagnostic de performance énergétique)</strong> : toujours obligatoire. Valable 10 ans pour un DPE réalisé depuis le 1er juillet 2021 ; ceux réalisés avant cette date ne sont plus valables et doivent être refaits.</li>
+<li><strong>Amiante</strong> : si le permis de construire de l'immeuble a été délivré avant le 1er juillet 1997. Un constat d'absence d'amiante n'a pas de limite de validité. En copropriété, il porte sur les parties privatives ; la fiche récapitulative du dossier technique amiante des parties communes se demande au syndic.</li>
+<li><strong>Plomb (Crep)</strong> : si l'immeuble a été construit avant le 1er janvier 1949, ce qui concerne une grande partie des immeubles anciens parisiens. Il doit dater de moins d'un an à la signature, sauf s'il ne relève pas de plomb, auquel cas il n'est pas à refaire.</li>
+<li><strong>Électricité</strong> et <strong>gaz</strong> : si l'installation intérieure a plus de 15 ans. Validité de 3 ans.</li>
+<li><strong>Termites</strong> : si l'immeuble est dans une zone délimitée par arrêté préfectoral. Validité de 6 mois.</li>
+<li><strong>État des risques</strong> : si le bien est situé dans une zone à risques (naturels, miniers, technologiques, sismicité, radon…). Il doit dater de moins de 6 mois. Le vendeur informe aussi des sinistres indemnisés au titre d'une catastrophe naturelle ou technologique.</li>
+<li><strong>Bruit</strong> : si le logement est dans une zone d'exposition au bruit d'un aérodrome.</li>
+<li><strong>Mérule</strong> : une information à donner dans les zones fixées par arrêté.</li>
+<li><strong>Assainissement</strong> : selon les cas (installation autonome, ou contrôle du raccordement au réseau dans certaines communes d'Île-de-France listées par décret). Votre notaire sait si votre commune est concernée.</li>
+<li><strong>Carnet d'information du logement</strong> : si des travaux de rénovation ou un permis / une déclaration préalable datent de 2023 ou après.</li>
+</ul>
+<p>L'audit énergétique, exigé pour certaines ventes de maisons ou d'immeubles en monopropriété mal classés, ne concerne pas la vente d'un lot de copropriété selon l'ANIL.</p>
+
+<h2>Copropriété : la surface Carrez et les documents du syndic</h2>
+<p>La superficie privative du lot (loi Carrez) doit figurer dans la promesse et dans l'acte de vente. Le mesurage par un professionnel est recommandé : une erreur peut avoir des conséquences sur le prix. S'y ajoutent les documents propres à la copropriété, à remettre au plus tard à la promesse : fiche synthétique, règlement de copropriété, procès-verbaux des trois dernières assemblées générales, carnet d'entretien, conclusions du diagnostic technique global et plan pluriannuel de travaux s'ils existent. Pensez aussi à vérifier que les travaux réalisés dans l'appartement avaient bien été autorisés lorsqu'ils le devaient (voir notre article sur les <a href="/journal/travaux-copropriete-faut-il-une-autorisation.html">travaux en copropriété et l'accord de l'AG</a>).</p>
+
+<h2>DPE : ce qui change avec le nouveau calcul</h2>
+<p>Selon la {{lien:Service-Public DPE|fiche officielle sur le DPE}}, le coefficient de conversion de l'électricité est passé de 2,3 à 1,9 le 1er janvier 2026, ce qui peut améliorer l'étiquette des logements chauffés à l'électricité. Un arrêté du 19 août 2026 l'abaisse encore à 1,7 au 1er janvier 2027. Le ministère indique que les DPE réalisés jusqu'au 31 décembre 2026 restent valables et pourront être mis à jour gratuitement, sans nouvelle visite, sur l'{{lien:Observatoire DPE ADEME|Observatoire DPE-Audit de l'ADEME}} à partir du 1er janvier 2027.</p>
+<p>Dans l'annonce, les classes énergie et climat doivent apparaître de façon lisible, avec l'estimation des dépenses annuelles d'énergie ; un logement classé F ou G porte la mention « logement à consommation énergétique excessive ».</p>
+
+<h2>Que se passe-t-il si un diagnostic manque ?</h2>
+<p>Si un diagnostic obligatoire n'est pas fourni à la signature de l'acte, le vendeur ne peut pas s'exonérer de la garantie des vices cachés correspondante, même avec une clause d'exonération dans l'acte. Pour l'état des risques, l'acheteur peut demander l'annulation de la vente ou une diminution du prix. Mieux vaut donc un dossier complet et à jour avant les premières visites.</p>
+
+<h2>Préparer la vente au-delà des diagnostics</h2>
+<p>Les diagnostics décrivent le bien ; ils ne le mettent pas en valeur. Un DPE ou un constat électrique peut pointer des défauts qu'un acheteur intégrera dans sa négociation. Avant la mise en vente, il est souvent utile de faire le tri : ce qui mérite d'être réparé, ce qui relève simplement d'une remise en état, et ce qui se règle par une mise en scène soignée et de bonnes photos d'annonce. C'est le cœur de notre travail en home staging et en rénovation : si vous préparez une vente à Paris, <a href="/contact.html">demandez-nous un devis</a> et nous regarderons ensemble ce qui vaut la peine d'être fait.</p>""",
+        "faq": [
+            ("Qui paie les diagnostics lors d'une vente ?",
+             "<p>Le vendeur : c'est à lui de fournir le dossier de diagnostic technique. Le prix des diagnostics n'est pas réglementé, il varie selon le bien et les diagnostics nécessaires : comparez plusieurs devis de diagnostiqueurs certifiés.</p>"),
+            ("Combien de temps le DPE est-il valable pour vendre ?",
+             "<p>Dix ans pour un DPE réalisé depuis le 1er juillet 2021. Les DPE réalisés avant cette date ne sont plus valables et doivent être refaits avant la vente.</p>"),
+            ("Faut-il un audit énergétique pour vendre un appartement ?",
+             "<p>Selon l'ANIL, non pour un lot de copropriété : l'audit énergétique vise la vente de maisons individuelles ou d'immeubles en monopropriété mal classés.</p>"),
+            ("Peut-on signer la promesse sans tous les diagnostics ?",
+             "<p>Le DDT doit être joint à la promesse. S'il est incomplet à la signature de l'acte, le vendeur reste tenu de la garantie des vices cachés correspondante. Pour l'état des risques, l'acheteur peut demander l'annulation ou une baisse du prix.</p>"),
+            ("La surface Carrez est-elle un diagnostic ?",
+             "<p>C'est une mention obligatoire de la promesse et de l'acte pour un lot de copropriété. Elle fait partie des éléments à fournir ; le mesurage par un professionnel est recommandé.</p>"),
+        ],
+        "sources": [
+            ("Service-Public — Quels sont les diagnostics immobiliers à fournir en cas de vente d'un logement ?", "https://www.service-public.gouv.fr/particuliers/vosdroits/F10798"),
+            ("Service-Public — Diagnostic de performance énergétique (DPE)", "https://www.service-public.gouv.fr/particuliers/vosdroits/F16096"),
+            ("ANIL — Les différents diagnostics pour devenir propriétaire", "https://www.anil.org/votre-besoin/acheter/diagnostics/quels-diagnostics/"),
+            ("Service-Public — Vente d'un logement en copropriété", "https://www.service-public.gouv.fr/particuliers/vosdroits/F2604"),
+            ("Ministère de la Transition écologique — Facteur de conversion de l'électricité à 1,7 au 1er janvier 2027", "https://www.ecologie.gouv.fr/presse/dpe-audits-energetiques-publication-larrete-abaissant-facteur-conversion-lelectricite-17-1er"),
+        ],
+    },
+    {
         "slug": "travaux-copropriete-faut-il-une-autorisation",
         "title": "Travaux en copropriété : faut-il une autorisation ?",
         "h1": "Travaux en copropriété : faut-il une autorisation de l'AG ?",

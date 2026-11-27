@@ -53,6 +53,11 @@ LINKS = {
     "Service-Public copropriété": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F31513", "aff": False},
     "ANIL": {"url": "https://www.anil.org/", "aff": False},
     "Cosentino": {"url": "https://www.cosentino.com/fr-fr/", "aff": False},
+    "Service-Public diagnostics vente": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F10798", "aff": False},
+    "Service-Public DPE": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16096", "aff": False},
+    "ANIL diagnostics": {"url": "https://www.anil.org/votre-besoin/acheter/diagnostics/quels-diagnostics/", "aff": False},
+    "Annuaire diagnostiqueurs": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R57710", "aff": False},
+    "Observatoire DPE ADEME": {"url": "https://observatoire-dpe-audit.ademe.fr/", "aff": False},
 }
 
 TODAY = date.today().isoformat()
