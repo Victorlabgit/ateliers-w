@@ -31,11 +31,11 @@ EMAIL = "contact@ateliers-w.com"  # redirigée vers la boîte Gmail de la marque
 
 # Mentions légales : rempli dès que les informations sont fournies (aucun nom de personne).
 LEGAL = {
-    "forme": "",      # ex. "SAS au capital de 1 000 €"
-    "siret": "",      # ex. "123 456 789 00012"
-    "rcs": "",        # ex. "RCS Paris"
-    "siege": "",      # adresse du siège
-    "tva": "",
+    "forme": "Entreprise individuelle, nom commercial « W. »",
+    "siret": "832 267 801 00013",
+    "rcs": "Inscrite au RCS et au RNE sous le SIREN 832 267 801",
+    "siege": "14 route de Cercy-la-Tour, 58300 Saint-Hilaire-Fontaine",
+    "tva": "FR38832267801",
 }
 
 # Mesure d'audience Umami Cloud (EU). Vide = pas de script.
