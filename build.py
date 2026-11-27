@@ -45,7 +45,7 @@ UMAMI_ID = "90b2eca8-3694-41f1-ac79-abb402a58dac"
 UMAMI_SRC = "https://cloud.umami.is/script.js"
 
 # Newsletter (formulaire Brevo). Vide = bloc masqué.
-NEWSLETTER_ACTION = ""
+NEWSLETTER_ACTION = "https://420c6271.sibforms.com/serve/MUIFAKdmcePLf1-TXQVnmpCM2PZaWEdDRT-pQUy4f6dOIXBe6K1G9RZBwxonZzcDVnehRVbGAR75vKgOdYhWsKv-EqZDzv5V75oo6yzDdvQWWr7l66nlIf0RGDQovjPSErkSxczoIQ7MVo-ROdhYVSTWiiGMeyZnbrPEiZlOPFUtxbDepf5PDpiSSk5OXsBimD7Kwyv3LYzA1JvqDA=="
 
 # Réseaux sociaux de la marque (vide = icône masquée).
 SOCIAL = {
@@ -284,6 +284,7 @@ def newsletter_block(place):
       </div>
       <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="hidden" name="locale" value="fr">
+      <input type="hidden" name="html_type" value="simple">
       <p class="newsletter__mention">En vous inscrivant, vous acceptez de recevoir nos e-mails. Vous confirmerez votre adresse par un lien (double validation). Voir notre <a href="/confidentialite.html">politique de confidentialité</a>.</p>
     </form>
   </div>
