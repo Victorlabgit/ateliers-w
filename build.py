@@ -232,8 +232,9 @@ def head(title, description, path, jsonld=(), og_type="website", image="/img/ser
 <meta name="description" content="{esc(description)}">
 <meta name="robots" content="{robots}">
 <link rel="canonical" href="{SITE}{path}">
-<link rel="icon" type="image/x-icon" href="/img/logo.ico">
-<link rel="apple-touch-icon" href="/img/logo.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#f7f6f2">
 <meta property="og:site_name" content="{BRAND}">
 <meta property="og:title" content="{esc(title)}">
