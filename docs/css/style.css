@@ -377,3 +377,14 @@ select{width:100%;font:inherit;padding:.75rem;border:1px solid #999;background:#
 .contact-page select{background:#fff;color:#1a1a1a}
 @media (max-width:60rem){.nav-haut{display:none}.expertises__grille{grid-template-columns:repeat(2,1fr)}.newsletter__grille,.pc{grid-template-columns:1fr}}
 @media (max-width:30rem){.newsletter__ligne{flex-direction:column}.entete__droite .reseaux-icones{display:none}}
+
+/* Bandeau photo des pages de contenu (même esprit que l'accueil) */
+.bandeau-page{position:relative;min-height:46vh;display:flex;align-items:flex-end;color:#fff;background:#333 center/cover no-repeat}
+.bandeau-page::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.55))}
+.bandeau-page__contenu{position:relative;padding:7.5rem 0 3rem}
+.bandeau-page h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.1;margin:.3rem 0 .8rem;max-width:22ch;color:#fff;text-align:left}
+.bandeau-page__kicker{margin:.6rem 0 0;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;opacity:.9}
+.bandeau-page__meta{margin:0;font-size:.95rem;opacity:.9}
+.fil--clair,.fil--clair a{color:rgba(255,255,255,.85)}
+.reponse__titre{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem;font-weight:700}
+.reponse strong:first-child{display:inline;font-size:inherit;letter-spacing:0;text-transform:none;margin:0}

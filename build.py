@@ -460,17 +460,31 @@ def build_contact():
          body, [breadcrumb([("Accueil", "/"), ("Devis", "/contact.html")])], priority="0.8")
 
 
+
+def bandeau(h1, crumbs, image="/img/realisation-4.jpg", kicker="", meta=""):
+    """Bandeau photo en tête des pages de contenu (même esprit que l'accueil)."""
+    fil = " › ".join(f'<a href="{u}">{esc(t)}</a>' if u else esc(t) for t, u in crumbs)
+    k = f'<p class="bandeau-page__kicker">{esc(kicker)}</p>' if kicker else ""
+    m = f'<p class="bandeau-page__meta">{meta}</p>' if meta else ""
+    return f"""
+<section class="bandeau-page" style="background-image:url('{image}')">
+  <div class="wrap bandeau-page__contenu">
+    <nav class="fil fil--clair" aria-label="Fil d'Ariane">{fil}</nav>
+    {k}<h1>{h1}</h1>{m}
+  </div>
+</section>"""
+
+
 # ---------------------------------------------------------------- pages simples
 def simple(path, title, description, h1, content, crumb, priority="0.3"):
     body = f"""
+{bandeau(h1, [("Accueil", "/"), (crumb, "")])}
 <main class="section page-texte">
   <div class="wrap texte">
-    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › {esc(crumb)}</nav>
-    <h1 class="titre-page">{h1}</h1>
     {content}
   </div>
 </main>"""
-    page(path, title, description, body, [breadcrumb([("Accueil", "/"), (crumb, path)])], priority=priority)
+    page(path, title, description, body, [breadcrumb([("Accueil", "/"), (crumb, path)])], priority=priority, hero=True)
 
 
 def build_static_pages():
@@ -591,11 +605,9 @@ def build_guides():
         rel = ("<section class='lies'><h2>À lire aussi</h2><ul>" + "".join(
             f'<li><a href="/journal/{p["slug"]}.html">{esc(p["h1"])}</a></li>' for p in related) + "</ul></section>") if related else ""
         body = f"""
+{bandeau(esc(g['h1']), [("Accueil", "/"), ("Guides", "/guides/")], g.get("image", "/img/service-renovation.jpg"), "Guide comparatif", f"Mis à jour le {fr_date(g.get('updated', g['date']))} · {g['read']} min de lecture")}
 <main class="section page-texte">
   <article class="wrap texte">
-    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › <a href="/guides/">Guides</a> › {esc(g['h1'])}</nav>
-    <h1 class="titre-page">{esc(g['h1'])}</h1>
-    <p class="meta">Mis à jour le {fr_date(g.get('updated', g['date']))} · {g['read']} min de lecture</p>
     {aff_notice(has_aff(*texts))}
     {expand(g['intro'])}
     <div class="verdict"><h2>En bref</h2>{expand(g['verdict'])}</div>
@@ -619,17 +631,16 @@ def build_guides():
             breadcrumb([("Accueil", "/"), ("Guides", "/guides/"), (g["h1"], path)]),
             faq_jsonld(g["faq"]),
         ]
-        page(path, g["title"], g["description"], body, ld, lastmod=g.get("updated", g["date"]), priority="0.8",
+        page(path, g["title"], g["description"], body, ld, lastmod=g.get("updated", g["date"]), priority="0.8", hero=True,
              og_type="article", image=g.get("image", "/img/service-renovation.jpg"))
 
     cartes = "".join(
         f'<a class="carte" href="/guides/{g["slug"]}.html"><span class="carte__cat">Guide comparatif</span>'
         f'<h2>{esc(g["h1"])}</h2><p>{esc(g["description"])}</p></a>' for g in GUIDES)
     body = f"""
+{bandeau("Guides comparatifs", [("Accueil", "/"), ("Guides", "")], "/img/service-design-interieur.jpg", "Bien choisir avant vos travaux")}
 <main class="section page-texte">
   <div class="wrap">
-    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › Guides</nav>
-    <h1 class="titre-page">Guides comparatifs</h1>
     <p class="chapeau">Matériaux, finitions, aménagements : nos comparatifs pour choisir en connaissance de cause avant vos travaux. Pour les questions pratiques, voir aussi <a href="/journal/">le Journal</a>.</p>
     <div class="cartes">{cartes}</div>
   </div>
@@ -637,7 +648,7 @@ def build_guides():
 {newsletter_block("guides")}"""
     page("/guides/", f"Guides comparatifs rénovation et décoration | {BRAND}",
          "Comparatifs de matériaux, finitions et aménagements pour bien choisir avant vos travaux de rénovation à Paris.",
-         body, [breadcrumb([("Accueil", "/"), ("Guides", "/guides/")])], priority="0.7")
+         body, [breadcrumb([("Accueil", "/"), ("Guides", "/guides/")])], priority="0.7", hero=True)
 
 
 # ---------------------------------------------------------------- journal
@@ -651,13 +662,11 @@ def build_blog():
         lies = ("<section class='lies'><h2>À lire aussi</h2><ul>" + "".join(
             f'<li><a href="/journal/{q["slug"]}.html">{esc(q["h1"])}</a></li>' for q in autres) + "</ul></section>") if autres else ""
         body = f"""
+{bandeau(esc(p['h1']), [("Accueil", "/"), ("Journal", "/journal/"), (p['category'], "")], p.get("image", "/img/service-renovation.jpg"), "Le Journal de l'atelier", f"{fr_date(p['date'])} · {esc(p['category'])} · {p['read']} min de lecture")}
 <main class="section page-texte">
   <article class="wrap texte">
-    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › <a href="/journal/">Journal</a> › {esc(p['category'])}</nav>
-    <h1 class="titre-page">{esc(p['h1'])}</h1>
-    <p class="meta">{fr_date(p['date'])} · {esc(p['category'])} · {p['read']} min de lecture</p>
     {aff_notice(has_aff(*texts))}
-    <div class="reponse"><strong>La réponse courte</strong>{expand(p['answer'])}</div>
+    <div class="reponse"><span class="reponse__titre">La réponse courte</span>{expand(p['answer'])}</div>
     {expand(p['body'])}
     {guide_box}
     {faq_html(p['faq'])}
@@ -678,7 +687,7 @@ def build_blog():
             breadcrumb([("Accueil", "/"), ("Journal", "/journal/"), (p["h1"], path)]),
             faq_jsonld(p["faq"]),
         ]
-        page(path, p["title"], p["description"], body, ld, lastmod=p.get("updated", p["date"]), priority="0.7",
+        page(path, p["title"], p["description"], body, ld, lastmod=p.get("updated", p["date"]), priority="0.7", hero=True,
              og_type="article", image=p.get("image", "/img/service-renovation.jpg"))
 
     cartes = "".join(
@@ -686,10 +695,9 @@ def build_blog():
         f'<h2>{esc(p["h1"])}</h2><p>{esc(p["description"])}</p><span class="carte__date">{fr_date(p["date"])}</span></a>'
         for p in POSTS)
     body = f"""
+{bandeau("Le Journal de l'atelier", [("Accueil", "/"), ("Journal", "")], "/img/realisation-5.jpg", "Conseils rénovation, home staging et déco")}
 <main class="section page-texte">
   <div class="wrap">
-    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › Journal</nav>
-    <h1 class="titre-page">Le Journal de l'atelier</h1>
     <p class="chapeau">Rénovation, copropriété, home staging, décoration : des réponses claires aux questions que l'on se pose avant de faire des travaux ou de vendre. Pour comparer les matériaux, voir <a href="/guides/">nos guides</a>.</p>
     <div class="cartes">{cartes}</div>
   </div>
@@ -697,7 +705,7 @@ def build_blog():
 {newsletter_block("journal-index")}"""
     page("/journal/", f"Journal : conseils rénovation, home staging et déco | {BRAND}",
          "Le Journal d'Ateliers W : conseils pratiques sur la rénovation, la copropriété, le home staging et la décoration à Paris.",
-         body, [breadcrumb([("Accueil", "/"), ("Journal", "/journal/")])], priority="0.8")
+         body, [breadcrumb([("Accueil", "/"), ("Journal", "/journal/")])], priority="0.8", hero=True)
 
 
 # ---------------------------------------------------------------- sitemap & robots
