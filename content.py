@@ -24,7 +24,7 @@ GUIDES = [
         "verdict": """<ul>
 <li><strong>Budget serré, cuisine de location ou de vente :</strong> le stratifié.</li>
 <li><strong>Cuisine chaleureuse, prêt à entretenir :</strong> le bois massif.</li>
-<li><strong>Grande cuisine familiale, peu d'entretien :</strong> le quartz (pierre reconstituée), avec des dessous-de-plat.</li>
+<li><strong>Grande cuisine familiale, peu d'entretien :</strong> le quartz (pierre reconstituée), avec des {{lien:Amazon dessous-de-plat|dessous-de-plat}}.</li>
 <li><strong>Celui qui pose ses casseroles partout :</strong> la céramique / pierre frittée, en surveillant les chocs sur les chants.</li>
 <li><strong>Aspect pierre naturelle unique :</strong> le granit.</li>
 <li><strong>Usage intensif, esprit professionnel :</strong> l'inox.</li>
@@ -46,7 +46,7 @@ GUIDES = [
                 "best_for": "Cuisines chaleureuses, style naturel ou campagne chic",
                 "watch": "Entretien régulier (huile), eau stagnante près de l'évier",
                 "body": """<p>Chêne, hêtre, noyer… Le bois massif apporte une chaleur qu'aucune imitation n'égale tout à fait, et il vieillit bien. Ses marques d'usage se poncent : un plan bien entretenu peut être remis à neuf.</p>
-<p>En contrepartie, il demande un entretien régulier (huile ou vernis selon la finition) et n'aime pas l'eau qui stagne. Près d'un évier, une découpe soignée et une protection des chants sont indispensables.</p>""",
+<p>En contrepartie, il demande un entretien régulier ({{lien:Amazon huile plan de travail|huile pour plan de travail}} ou vernis selon la finition) et n'aime pas l'eau qui stagne. Près d'un évier, une découpe soignée et une protection des chants sont indispensables.</p>""",
                 "pros": ["Matériau naturel et chaleureux", "Se ponce et se rénove", "Agréable au toucher"],
                 "cons": ["Entretien régulier à prévoir", "Sensible à l'eau stagnante et aux taches", "Marque avec les chocs et la chaleur"],
             },
@@ -56,7 +56,7 @@ GUIDES = [
                 "best_for": "Cuisines familiales, plans clairs uniformes, peu d'entretien",
                 "watch": "Chaleur directe et chocs thermiques : dessous-de-plat obligatoires",
                 "body": """<p>Le quartz de synthèse est un agglomérat de quartz naturel et de résine (c'est le principe de marques comme Silestone ou Caesarstone). Sa surface est très peu poreuse : elle résiste bien aux taches et se nettoie à l'eau savonneuse. Les teintes sont régulières, ce qui permet de beaux plans clairs.</p>
-<p>Sa limite, rappelée par les fabricants eux-mêmes dans leurs guides d'entretien : la chaleur directe. Il faut poser poêles et plats sortant du four sur un dessous-de-plat, car un choc thermique peut marquer ou fissurer la surface. Les chants et les angles sont aussi les zones les plus fragiles aux chocs.</p>""",
+<p>Sa limite, rappelée par les fabricants eux-mêmes dans leurs guides d'entretien : la chaleur directe. Il faut poser poêles et plats sortant du four sur un {{lien:Amazon dessous-de-plat|dessous-de-plat}}, car un choc thermique peut marquer ou fissurer la surface. Les chants et les angles sont aussi les zones les plus fragiles aux chocs.</p>""",
                 "pros": ["Très peu poreux : résiste bien aux taches", "Entretien simple au quotidien", "Teintes régulières, grand choix de coloris"],
                 "cons": ["Ne pas poser de récipient brûlant directement", "Chants sensibles aux chocs", "Poids et pose par un professionnel"],
             },
@@ -75,7 +75,7 @@ GUIDES = [
                 "name": "Granit et pierre naturelle",
                 "best_for": "Aspect unique, cuisines de caractère",
                 "watch": "Porosité variable selon la pierre : traitement à prévoir",
-                "body": """<p>Chaque plaque de granit est unique. C'est une pierre dure, qui résiste bien à la chaleur et aux rayures. Sa porosité varie selon les variétés : certaines pierres doivent être traitées (hydrofuge / oléofuge) pour éviter que l'huile ou le vin ne marquent.</p>
+                "body": """<p>Chaque plaque de granit est unique. C'est une pierre dure, qui résiste bien à la chaleur et aux rayures. Sa porosité varie selon les variétés : certaines pierres doivent être traitées ({{lien:Amazon hydrofuge oléofuge pierre|hydrofuge / oléofuge}}) pour éviter que l'huile ou le vin ne marquent.</p>
 <p>Les autres pierres naturelles (marbre notamment) sont plus sensibles aux acides et aux taches : superbes, mais à réserver à ceux qui acceptent la patine.</p>""",
                 "pros": ["Pièce unique, aspect noble", "Bonne résistance à la chaleur et aux rayures", "Très durable"],
                 "cons": ["Porosité selon la pierre : traitement à renouveler", "Très lourd", "Teinte non uniforme d'une plaque à l'autre"],

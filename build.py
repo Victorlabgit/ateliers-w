@@ -9,12 +9,16 @@ Usage : python3 build.py
 - Liens sortants / affiliés : dictionnaire LINKS ci-dessous. Dans les textes,
   écrire {{lien:Clé}} ou {{lien:Clé|texte du lien}} ; le bon rel et le suivi
   Umami sont ajoutés automatiquement.
+- Amazon Partenaires : une entrée {"amazon": "mots-clés"} (recherche) ou
+  {"asin": "B0..."} (fiche produit) devient un lien amazon.fr avec AMAZON_TAG ;
+  la mention légale Amazon s'affiche alors sur la page.
 
 Règles : aucun nom de personne, jamais de prix / avis / tests inventés,
 sources officielles uniquement.
 """
 import hashlib, html, json, os, re, shutil
 from datetime import date
+from urllib.parse import quote_plus
 
 from content import GUIDES
 from blog import POSTS
@@ -48,8 +52,16 @@ SOCIAL = {
     "linkedin": "https://www.linkedin.com/company/ateliers-w/",
 }
 
+# Amazon Partenaires (Club Partenaires Amazon.fr).
+AMAZON_TAG = "atelierswfr-21"
+AMAZON_MENTION = "En tant que Partenaire Amazon, Ateliers W réalise un bénéfice sur les achats remplissant les conditions requises."
+
 # Liens sortants. "aff": True => lien affilié (rel sponsored + mention).
+# Amazon : {"amazon": "mots-clés"} ou {"asin": "B0..."} (aff implicite).
 LINKS = {
+    "Amazon dessous-de-plat": {"amazon": "dessous de plat cuisine"},
+    "Amazon huile plan de travail": {"amazon": "huile plan de travail bois"},
+    "Amazon hydrofuge oléofuge pierre": {"amazon": "hydrofuge oléofuge plan de travail granit"},
     "Service-Public copropriété": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F31513", "aff": False},
     "ANIL": {"url": "https://www.anil.org/", "aff": False},
     "Cosentino": {"url": "https://www.cosentino.com/fr-fr/", "aff": False},
@@ -73,10 +85,23 @@ def css_version():
         return hashlib.md5(f.read()).hexdigest()[:8]
 
 
+def is_amazon(l):
+    return "amazon" in l or "asin" in l
+
+
+def link_url(l):
+    if "asin" in l:
+        return f"https://www.amazon.fr/dp/{l['asin']}?tag={AMAZON_TAG}"
+    if "amazon" in l:
+        return f"https://www.amazon.fr/s?k={quote_plus(l['amazon'])}&tag={AMAZON_TAG}"
+    return l["url"]
+
+
 def link_html(key, text=None):
-    l = LINKS[key]
+    l = dict(LINKS[key])
+    l["url"] = link_url(l)
     text = text or key
-    if l["aff"]:
+    if l.get("aff") or is_amazon(l):
         return (f'<a href="{esc(l["url"])}" rel="sponsored nofollow noopener" target="_blank" '
                 f'data-umami-event="affiliate-click" data-umami-event-product="{esc(key)}">{text}</a>')
     return (f'<a href="{esc(l["url"])}" rel="noopener" target="_blank" '
@@ -90,12 +115,16 @@ def expand(s):
     return re.sub(r"\{\{lien:([^}]+)\}\}", rep, s)
 
 
+def _link_keys(texts):
+    return [m.group(1).strip() for m in re.finditer(r"\{\{lien:([^}|]+)", " ".join(texts))]
+
+
 def has_aff(*texts):
-    blob = " ".join(texts)
-    for m in re.finditer(r"\{\{lien:([^}|]+)", blob):
-        if LINKS[m.group(1).strip()]["aff"]:
-            return True
-    return False
+    return any(LINKS[k].get("aff") or is_amazon(LINKS[k]) for k in _link_keys(texts))
+
+
+def has_amazon(*texts):
+    return any(is_amazon(LINKS[k]) for k in _link_keys(texts))
 
 
 def fr_date(iso):
@@ -319,9 +348,11 @@ def cta_devis(place, texte="Un projet de rénovation, de home staging ou de déc
 </aside>"""
 
 
-def aff_notice(on):
-    return ('<p class="mention-aff">Contient des liens affiliés. <a href="/liens-affilies.html">En savoir plus</a></p>'
-            if on else "")
+def aff_notice(texts):
+    if not has_aff(*texts):
+        return ""
+    amz = f" {AMAZON_MENTION}" if has_amazon(*texts) else ""
+    return f'<p class="mention-aff">Contient des liens affiliés.{amz} <a href="/liens-affilies.html">En savoir plus</a></p>'
 
 
 # ---------------------------------------------------------------- accueil
@@ -564,6 +595,8 @@ def build_static_pages():
   <li>Ils ne changent jamais nos conseils : nous recommandons des matériaux et produits pour leurs qualités, y compris quand il n'existe aucun lien affilié.</li>
   <li>Nous n'inventons ni prix, ni avis, ni tests. Les informations viennent des fabricants et de sources officielles, citées en bas de chaque page.</li>
 </ul>
+<h2>Amazon</h2>
+<p>{AMAZON_MENTION}</p>
 <p>Notre activité principale reste nos chantiers : rénovation, home staging, design d'intérieur et communication immobilière.</p>
 """, "Liens affiliés")
 
@@ -615,7 +648,7 @@ def build_guides():
 {bandeau(esc(g['h1']), [("Accueil", "/"), ("Guides", "/guides/")], g.get("image", "/img/service-renovation.jpg"), "Guide comparatif", f"Mis à jour le {fr_date(g.get('updated', g['date']))} · {g['read']} min de lecture")}
 <main class="section page-texte">
   <article class="wrap texte">
-    {aff_notice(has_aff(*texts))}
+    {aff_notice(texts)}
     {expand(g['intro'])}
     <div class="verdict"><h2>En bref</h2>{expand(g['verdict'])}</div>
     <div class="tableau"><table><thead><tr><th>Option</th><th>Idéal pour</th><th>À surveiller</th></tr></thead><tbody>{tableau}</tbody></table></div>
@@ -672,7 +705,7 @@ def build_blog():
 {bandeau(esc(p['h1']), [("Accueil", "/"), ("Journal", "/journal/"), (p['category'], "")], p.get("image", "/img/service-renovation.jpg"), "Le Journal de l'atelier", f"{fr_date(p['date'])} · {esc(p['category'])} · {p['read']} min de lecture")}
 <main class="section page-texte">
   <article class="wrap texte">
-    {aff_notice(has_aff(*texts))}
+    {aff_notice(texts)}
     <div class="reponse"><span class="reponse__titre">La réponse courte</span>{expand(p['answer'])}</div>
     {expand(p['body'])}
     {guide_box}
