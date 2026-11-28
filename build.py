@@ -76,6 +76,8 @@ LINKS = {
     "Amazon patins feutre": {"amazon": "patins feutre meubles"},
     "Quick-Step humidité": {"url": "https://www.quick-step.co.uk/en-gb/frequently-asked-questions/laminate/general/how-do-i-avoid-humidity-problems", "aff": False},
     "Tarkett pièces humides": {"url": "https://home.tarkett.co.uk/en_GB/node/vinyl-floors-in-the-kitchen-and-bathroom-14508", "aff": False},
+    "Service-Public déclaration préalable": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578", "aff": False},
+    "Service-Public ravalement": {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F36779", "aff": False},
     "ADEME bruit": {"url": "https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/proteger-bruit/isolation-phonique-reduire-nuisances-sonores", "aff": False},
 }
 

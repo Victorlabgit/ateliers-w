@@ -14,6 +14,65 @@ Insérer les nouveaux articles EN HAUT de la liste.
 
 POSTS = [
     {
+        "slug": "declaration-prealable-de-travaux-quand-la-deposer",
+        "title": "Déclaration préalable de travaux : quand la déposer ?",
+        "h1": "Déclaration préalable de travaux : quand est-elle obligatoire ?",
+        "description": "Fenêtres, volets, façade, extension : quand la déclaration préalable de travaux est obligatoire, comment la déposer à Paris et quels délais prévoir.",
+        "date": "2026-11-28",
+        "category": "Aides & règles",
+        "read": 6,
+        "guide": None,
+        "image": "/img/og/declaration-prealable-de-travaux-quand-la-deposer.jpg",
+        "answer": """<p>La <strong>déclaration préalable de travaux</strong> (DP) est obligatoire pour les travaux qui ne relèvent pas du permis de construire mais qui créent une petite surface, modifient l'aspect extérieur d'un bâtiment (fenêtres, volets, façade, toiture) ou changent la destination d'un local. Des travaux purement intérieurs, sans création de surface ni changement de destination, n'en demandent pas. La mairie dispose en principe d'un mois pour s'opposer au projet.</p>""",
+        "body": """<p>Avant de changer des fenêtres, repeindre une façade ou transformer un local, la question de la déclaration préalable de travaux se pose presque toujours. C'est une autorisation d'urbanisme plus légère que le permis de construire, mais l'oublier peut bloquer un chantier ou compliquer une vente. Voici ce qu'en dit {{lien:Service-Public déclaration préalable|la fiche officielle de Service-Public}}, appliqué aux situations que nous rencontrons à Paris.</p>
+
+<h2>Quels travaux sont soumis à déclaration préalable ?</h2>
+<p>La DP concerne les travaux non soumis à permis de construire qui entraînent l'une de ces trois choses :</p>
+<ul>
+<li><strong>une création de surface de plancher ou d'emprise au sol</strong> de petite taille : agrandissement, véranda, terrasse, mezzanine, surélévation limitée. Au-delà de certains seuils, c'est un permis de construire ; la fiche officielle détaille ces seuils selon que la commune est couverte ou non par un plan local d'urbanisme ;</li>
+<li><strong>une modification de l'aspect extérieur</strong> : remplacement de fenêtres ou de portes qui n'est pas à l'identique, volets, toiture, fenêtre de toit, balcon, isolation thermique par l'extérieur, ravalement qui change couleurs ou matériaux, boîtier extérieur de climatisation ou de pompe à chaleur, panneaux solaires ;</li>
+<li><strong>un changement de destination</strong>, par exemple transformer un local commercial en logement, sans toucher aux structures porteuses ni à la façade.</li>
+</ul>
+<p>À l'inverse, refaire une cuisine, une salle de bains, abattre une cloison non porteuse ou changer un sol à l'intérieur d'un appartement ne demande pas d'autorisation d'urbanisme. En copropriété, d'autres règles s'ajoutent : voir notre article sur <a href="/journal/travaux-copropriete-faut-il-une-autorisation.html">l'autorisation de l'assemblée générale</a>.</p>
+
+<h2>Façade et ravalement : le cas particulier</h2>
+<p>Selon {{lien:Service-Public ravalement|Service-Public}}, un ravalement ou une remise en peinture <strong>à l'identique</strong> (même couleur, mêmes matériaux) est un simple entretien, dispensé d'autorisation. Dès que la couleur ou les matériaux changent, une DP est nécessaire. Elle l'est aussi dans tous les cas lorsque le bâtiment se trouve en <strong>secteur protégé</strong> (site patrimonial remarquable, abords d'un monument historique, site classé…), lorsqu'il est lui-même protégé au titre des monuments historiques, ou lorsque la commune a décidé de soumettre les ravalements à autorisation. L'isolation thermique par l'extérieur est, elle, toujours soumise à DP.</p>
+<p>À Paris, une grande partie des immeubles se trouve dans des secteurs protégés : la vérification auprès du service de l'urbanisme est indispensable avant tout projet visible depuis la rue.</p>
+
+<h2>Comment déposer la déclaration à Paris</h2>
+<p>Le dossier comprend le formulaire officiel de déclaration préalable et des pièces graphiques : un plan de situation dans tous les cas, puis selon le projet un plan de masse, un plan en coupe, des plans de façades et de toitures s'ils sont modifiés, et des pièces complémentaires selon les cas.</p>
+<p>Dans la plupart des communes, on peut déposer en ligne, par lettre recommandée ou en mairie contre récépissé. À Paris, Service-Public indique que le dépôt se fait <strong>uniquement par voie dématérialisée</strong>, sur le guichet électronique de la Ville. Un récépissé indique la date à partir de laquelle le délai court.</p>
+
+<h2>Délais : combien de temps attendre ?</h2>
+<p>Lorsque le dossier est complet, le délai d'instruction est de <strong>un mois</strong> à compter du dépôt. S'il manque des pièces, la mairie doit le signaler dans le premier mois ; vous avez alors trois mois pour compléter, faute de quoi la demande est rejetée, et le délai ne démarre qu'au dossier complet. Dans certains cas, notamment en secteur protégé, la mairie peut vous notifier un délai plus long : il faut alors l'intégrer au calendrier du chantier.</p>
+<p>Sans réponse à la fin du délai, vous bénéficiez d'une <strong>décision tacite de non-opposition</strong>. Vous pouvez demander à la mairie un certificat qui l'atteste, utile notamment au moment d'une vente.</p>
+
+<h2>Après l'accord : affichage, recours, validité</h2>
+<ul>
+<li><strong>Affichage</strong> : un panneau visible de l'extérieur doit être installé sur le terrain dès l'accord (ou dès la fin du délai d'instruction), pendant toute la durée des travaux.</li>
+<li><strong>Recours des tiers</strong> : un voisin peut contester l'autorisation pendant deux mois à compter du premier jour d'affichage continu. Démarrer les travaux après ce délai limite le risque.</li>
+<li><strong>Validité</strong> : l'autorisation est valable trois ans. Elle est périmée si les travaux ne commencent pas dans ce délai ou s'ils sont interrompus plus d'un an. Elle peut être prolongée deux fois d'un an, sur demande au moins deux mois avant son expiration.</li>
+</ul>
+
+<h2>Notre conseil avant de lancer le projet</h2>
+<p>Listez ce qui, dans votre projet, se voit de l'extérieur ou change l'usage du lieu : c'est là que se trouve l'autorisation d'urbanisme. Pour un appartement en copropriété, comptez deux démarches distinctes, l'AG et la mairie, qui ne se remplacent pas. Pour un doute sur votre situation, le service de l'urbanisme de la mairie ou l'{{lien:ANIL|ADIL de votre département}} renseigne gratuitement. Si vous préparez une <a href="/renovation-appartement-paris.html">rénovation à Paris</a>, nous intégrons ces démarches au planning dès l'étude du projet : décrivez-le-nous via une <a href="/contact.html">demande de devis</a>.</p>""",
+        "faq": [
+            ("Faut-il une déclaration préalable pour changer ses fenêtres ?",
+             "<p>Oui si le remplacement n'est pas à l'identique (forme, matériau, couleur ou découpage différents). Un remplacement strictement identique relève de l'entretien. En copropriété, l'accord de l'assemblée générale est aussi nécessaire, car les fenêtres touchent l'aspect extérieur de l'immeuble.</p>"),
+            ("Des travaux intérieurs dans un appartement demandent-ils une déclaration préalable ?",
+             "<p>Non, tant qu'ils ne créent pas de surface de plancher, ne changent pas la destination du local et ne modifient pas l'aspect extérieur. Cuisine, salle de bains, sols ou cloisons non porteuses n'en demandent pas.</p>"),
+            ("Que se passe-t-il si la mairie ne répond pas ?",
+             "<p>À la fin du délai d'instruction (un mois si le dossier est complet, sauf délai plus long notifié), le silence vaut décision tacite de non-opposition. Vous pouvez demander un certificat de non-opposition à la mairie.</p>"),
+            ("Combien de temps une déclaration préalable est-elle valable ?",
+             "<p>Trois ans. Elle peut être prolongée deux fois d'un an si les règles d'urbanisme n'ont pas changé, à condition de le demander au moins deux mois avant la fin de validité.</p>"),
+        ],
+        "sources": [
+            ("Service-Public — Déclaration préalable (DP)", "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"),
+            ("Service-Public — Quelle autorisation d'urbanisme pour ravaler ou repeindre une façade ?", "https://www.service-public.gouv.fr/particuliers/vosdroits/F36779"),
+            ("Service-Public — Autorisations d'urbanisme", "https://www.service-public.gouv.fr/particuliers/vosdroits/N319"),
+        ],
+    },
+    {
         "slug": "diagnostics-obligatoires-vente-appartement",
         "title": "Diagnostics obligatoires pour vendre un appartement",
         "h1": "Diagnostics obligatoires pour vendre un appartement : la liste",
